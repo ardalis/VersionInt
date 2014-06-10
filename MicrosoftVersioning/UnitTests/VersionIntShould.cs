@@ -17,5 +17,14 @@ namespace MicrosoftVersioning.UnitTests
 
             Assert.AreEqual(10, version);
         }
+
+        [Test]
+        [ExpectedException(ExpectedException = typeof (ArgumentOutOfRangeException))]
+        public void RaiseExceptionGiven13AsStartingValue()
+        {
+            VersionInt version = 13;
+
+            Assert.Fail("Should not get here without an exception.");
+        }
     }
 }
