@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace MicrosoftVersioning.UnitTests
@@ -25,6 +21,16 @@ namespace MicrosoftVersioning.UnitTests
             VersionInt version = 13;
 
             Assert.Fail("Should not get here without an exception.");
+        }
+
+        [Test]
+        public void IncrementFrom12To14()
+        {
+            VersionInt version = 12;
+
+            version++;
+
+            Assert.AreEqual(14, version);
         }
     }
 }

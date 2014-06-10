@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MicrosoftVersioning
 {
@@ -19,6 +15,12 @@ namespace MicrosoftVersioning
         public static implicit operator int(VersionInt value)
         {
             return value._value;
+        }
+
+        public static VersionInt operator ++(VersionInt value)
+        {
+            if (value == 12) return 14;
+            return value + 1;
         }
 
         public static void IsInRange(int value)
